@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Technical Portfolio Design System */
+    --background: 250 50% 98%;
+    --foreground: 0 0% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+
+    /* Primary: Technical Blue */
+    --primary: 214 90% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 214 60% 96%;
+
+    /* Secondary: Neutral Grays */
+    --secondary: 210 11% 85%;
+    --secondary-foreground: 0 0% 11%;
+
+    --muted: 210 11% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 214 20% 92%;
+    --accent-foreground: 0 0% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 90% 52%;
+
+    --radius: 0.5rem;
+
+    /* Technical Highlights */
+    --code-bg: 220 13% 18%;
+    --code-text: 210 11% 85%;
+    --success: 142 76% 36%;
+    --warning: 45 93% 47%;
+
+    /* Layout & Spacing */
+    --section-padding: 5rem;
+    --content-width: 1200px;
+
+    /* Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Dark mode: Technical Lab Aesthetic */
+    --background: 0 0% 11%;
+    --foreground: 210 11% 93%;
+
+    --card: 220 13% 14%;
+    --card-foreground: 210 11% 93%;
+
+    --popover: 220 13% 14%;
+    --popover-foreground: 210 11% 93%;
+
+    --primary: 214 90% 60%;
+    --primary-foreground: 0 0% 11%;
+    --primary-soft: 214 60% 15%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 210 11% 93%;
+
+    --muted: 220 13% 18%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 220 13% 18%;
+    --accent-foreground: 210 11% 93%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 11% 93%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 214 90% 60%;
+
+    --code-bg: 220 13% 9%;
+    --code-text: 210 11% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+  }
+
+  code {
+    @apply font-mono;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .technical-grid {
+    @apply grid gap-6 md:gap-8;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--accent)) 100%);
+  }
+
+  .code-block {
+    @apply bg-[hsl(var(--code-bg))] text-[hsl(var(--code-text))] rounded-lg p-4 font-mono text-sm;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20;
+  }
+
+  .badge-success {
+    @apply bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800;
+  }
+
+  .badge-primary {
+    @apply bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 border border-white/20 dark:border-gray-800/20;
+  }
+}

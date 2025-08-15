@@ -6,13 +6,13 @@ import heroImage from '@/assets/hero-bg.jpg';
 const Hero = () => {
   const achievements = [
     "Meta Hackathon Finalist (Top 6/300+)",
-    "Senior Research Fellow",
-    "Software Safety Research",
-    "ML from First Principles"
-  ];
+    "Publication-Track Senior Research", 
+    "Autonomous Systems Research",
+    
+  ]
 
   const handleEmailClick = () => {
-    navigator.clipboard.writeText('israel.avendano@example.com');
+    navigator.clipboard.writeText('israelavendanojr@gmail.com');
     // You could add a toast notification here
   };
 
@@ -50,10 +50,10 @@ const Hero = () => {
           {/* Title & Subtitle */}
           <div className="space-y-4 mb-8 fade-in">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-200">
-              Computer Science Researcher & Student
+              Software Engineer & Researcher
             </h2>
             <p className="text-lg md:text-xl text-gray-200 font-mono">
-              Autonomous Systems • AI/ML • Research Leadership
+              Applied AI/ML • Full-Stack Development • Autonomous Robotics
             </p>
           </div>
 
@@ -61,33 +61,67 @@ const Hero = () => {
           <div className="text-lg text-gray-300 mb-8 fade-in">
             <p className="mb-2">Western Washington University • Graduating June 2026</p>
             <p className="text-blue-200 font-semibold">
-              Seeking Summer 2026: Research-focused SWE & AI/ML roles
+              Seeking Summer 2026 Roles
             </p>
           </div>
 
           {/* Call-to-Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 fade-in">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-              <FileText className="w-4 h-4 mr-2" />
-              Download Resume
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white"
+              asChild
+            >
+              <a 
+                href="https://drive.google.com/file/d/1aQAlPaApBrpjEFNfYhax3YcZooGM118S/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FileText className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
             </Button>
             <div className="flex gap-3">
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-gray-900">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
-              <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-gray-900">
-                <Linkedin className="w-4 h-4 mr-2" />
-                LinkedIn
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-white border-white hover:bg-white hover:text-gray-900"
+                asChild
+              >
+                <a 
+                  href="https://github.com/israelavendanojr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </a>
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
-                onClick={handleEmailClick}
                 className="text-white border-white hover:bg-white hover:text-gray-900"
+                asChild
               >
-                <Mail className="w-4 h-4 mr-2" />
-                Email
+                <a 
+                  href="https://www.linkedin.com/in/israelavendanojr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-white border-white hover:bg-white hover:text-gray-900"
+                asChild
+              >
+                <a href="mailto:israelavendanojr@gmail.com">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email
+                </a>
               </Button>
             </div>
           </div>

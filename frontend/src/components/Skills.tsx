@@ -1,68 +1,83 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Code2, Brain, Cog, FlaskConical } from 'lucide-react';
+import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
+import { Code2, Package, Wrench, BookOpen } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Core Programming",
+      title: "Languages",
       icon: <Code2 className="w-6 h-6" />,
       color: "text-blue-600",
+      chartColor: "#3B82F6",
       skills: [
-        { name: "Python", level: 95, proficiency: "Advanced" },
-        { name: "TypeScript", level: 80, proficiency: "Proficient" },
-        { name: "C/C++", level: 70, proficiency: "Intermediate" },
-        { name: "Java", level: 70, proficiency: "Intermediate" },
-        { name: "SQL", level: 80, proficiency: "Proficient" }
+        { name: "Python", level: 95 },
+        { name: "TypeScript", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "HTML/CSS", level: 90 },
+        { name: "Java", level: 75 },
+        { name: "C", level: 70 },
+        { name: "C++", level: 70 },
+        { name: "C#", level: 65 },
+        { name: "SQL (PostgreSQL)", level: 85 }
       ]
     },
     {
-      title: "AI/ML & Research",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Frameworks & Libraries",
+      icon: <Package className="w-6 h-6" />,
       color: "text-green-600",
+      chartColor: "#10B981",
       skills: [
-        { name: "PyTorch", level: 90, proficiency: "Advanced" },
-        { name: "OpenCV", level: 90, proficiency: "Advanced" },
-        { name: "scikit-learn", level: 80, proficiency: "Proficient" },
-        { name: "LLMs/Ollama", level: 75, proficiency: "Research-level" },
-        { name: "ROS2", level: 70, proficiency: "Research-level" },
-        { name: "Computer Vision", level: 90, proficiency: "Advanced" }
+        { name: "React", level: 85 },
+        { name: "Flask", level: 90 },
+        { name: "PyTorch", level: 90 },
+        { name: "Scikit-Learn", level: 85 },
+        { name: "OpenCV", level: 90 },
+        { name: "NumPy", level: 95 },
+        { name: "Pandas", level: 90 },
+        { name: "Matplotlib", level: 85 },
+        { name: "SeaBorn", level: 80 },
+        { name: "LangChain", level: 75 },
+        { name: "Tailwind", level: 85 },
+        { name: "Bootstrap", level: 80 },
+        { name: "Unity", level: 70 }
       ]
     },
     {
-      title: "Development & Systems",
-      icon: <Cog className="w-6 h-6" />,
+      title: "Tools & Technologies",
+      icon: <Wrench className="w-6 h-6" />,
       color: "text-purple-600",
+      chartColor: "#8B5CF6",
       skills: [
-        { name: "React", level: 80, proficiency: "Proficient" },
-        { name: "Flask", level: 90, proficiency: "Advanced" },
-        { name: "Git/GitHub", level: 95, proficiency: "Advanced" },
-        { name: "Linux/Unix", level: 80, proficiency: "Proficient" },
-        { name: "Embedded Systems", level: 70, proficiency: "Intermediate" }
-      ]
-    },
-    {
-      title: "Research Methods",
-      icon: <FlaskConical className="w-6 h-6" />,
-      color: "text-orange-600",
-      skills: [
-        { name: "Experimental Design", level: 85, proficiency: "Advanced" },
-        { name: "Technical Writing", level: 80, proficiency: "Proficient" },
-        { name: "Data Analysis", level: 90, proficiency: "Advanced" },
-        { name: "Algorithm Implementation", level: 85, proficiency: "Advanced" },
-        { name: "Cross-functional Collaboration", level: 90, proficiency: "Advanced" }
+        { name: "GitHub", level: 95 },
+        { name: "GitLab", level: 85 },
+        { name: "VS Code", level: 95 },
+        { name: "Visual Studio", level: 80 },
+        { name: "IntelliJ", level: 75 },
+        { name: "Linux/Unix", level: 85 },
+        { name: "Docker", level: 70 },
+        { name: "Jupyter", level: 90 },
+        { name: "PostgreSQL", level: 85 },
+        { name: "ROS2", level: 70 }
       ]
     }
   ];
 
-  const getProficiencyColor = (proficiency: string) => {
-    switch (proficiency) {
-      case "Advanced": return "text-green-600 dark:text-green-400";
-      case "Proficient": return "text-blue-600 dark:text-blue-400";
-      case "Research-level": return "text-purple-600 dark:text-purple-400";
-      case "Intermediate": return "text-orange-600 dark:text-orange-400";
-      default: return "text-gray-600 dark:text-gray-400";
-    }
+  // Create spider chart data for each category
+  const createSpiderData = (skills) => {
+    // Include all skills in the spider chart
+    return skills.map(skill => ({
+      skill: skill.name.length > 15 ? skill.name.substring(0, 15) + '...' : skill.name,
+      fullName: skill.name,
+      level: skill.level,
+      maxLevel: 100
+    }));
+  };
+
+  const getProficiencyLevel = (level) => {
+    if (level >= 90) return { label: "Expert", color: "text-green-600 dark:text-green-400" };
+    if (level >= 80) return { label: "Advanced", color: "text-blue-600 dark:text-blue-400" };
+    if (level >= 70) return { label: "Proficient", color: "text-purple-600 dark:text-purple-400" };
+    return { label: "Intermediate", color: "text-orange-600 dark:text-orange-400" };
   };
 
   return (
@@ -73,12 +88,12 @@ const Skills = () => {
             Technical Skills
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Authentic proficiency levels across the unique intersection of 
-            programming, AI/ML research, and systems engineering.
+            Comprehensive technical proficiency across languages, frameworks, and tools
+            with authentic skill levels based on real project experience.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <Card key={index} className="hover-lift">
               <CardHeader>
@@ -90,53 +105,66 @@ const Skills = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className={`text-sm font-medium ${getProficiencyColor(skill.proficiency)}`}>
-                        {skill.proficiency}
-                      </span>
-                    </div>
-                    <Progress 
-                      value={skill.level} 
-                      className="h-2"
-                    />
+                {/* Spider Chart */}
+                <div className="h-96">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <RadarChart data={createSpiderData(category.skills)} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+                      <PolarGrid 
+                        stroke="currentColor" 
+                        className="opacity-20"
+                      />
+                      <PolarAngleAxis 
+                        dataKey="skill" 
+                        tick={{ fontSize: 10, fill: 'currentColor' }}
+                        className="text-muted-foreground"
+                      />
+                      <PolarRadiusAxis 
+                        angle={90} 
+                        domain={[0, 100]} 
+                        tick={false}
+                        axisLine={false}
+                      />
+                      <Radar
+                        name="Skill Level"
+                        dataKey="level"
+                        stroke={category.chartColor}
+                        fill={category.chartColor}
+                        fillOpacity={0.15}
+                        strokeWidth={2}
+                        dot={{ fill: category.chartColor, strokeWidth: 1, r: 3 }}
+                      />
+                    </RadarChart>
+                  </ResponsiveContainer>
+                </div>
+
+                {/* Skill List with Levels */}
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm mb-3">All Skills</h4>
+                  <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                    {category.skills
+                      .sort((a, b) => b.level - a.level)
+                      .map((skill, skillIndex) => {
+                        const proficiency = getProficiencyLevel(skill.level);
+                        return (
+                          <div key={skillIndex} className="flex justify-between items-center text-sm">
+                            <span className="font-medium">{skill.name}</span>
+                            <div className="flex items-center gap-2">
+                              {/* <span className="text-xs text-muted-foreground">{skill.level}%</span> */}
+                              <span className={`text-xs font-medium ${proficiency.color}`}>
+                                {proficiency.label}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
                   </div>
-                ))}
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Key Strengths Highlight */}
-        <div className="mt-16 text-center">
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="pt-8">
-              <h3 className="text-xl font-bold mb-6">Key Technical Strengths</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-sm">
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-blue-600">Foundation-First Learning</h4>
-                  <p className="text-muted-foreground">
-                    Building neural networks from scratch, implementing algorithms mathematically before using libraries
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-green-600">Research-to-Production</h4>
-                  <p className="text-muted-foreground">
-                    Translating academic research into working systems, from ML models to physical automation
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-purple-600">Cross-Disciplinary Integration</h4>
-                  <p className="text-muted-foreground">
-                    Combining AI/ML, robotics, and software engineering in novel applications
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        
       </div>
     </section>
   );

@@ -175,37 +175,6 @@ const Experience = () => {
             ))}
           </div>
         </div>
-
-        {/* Career Progression Summary */}
-        <div className="mt-16">
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="pt-8">
-              <h3 className="text-xl font-bold mb-6 text-center">Career Progression</h3>
-              <div className="grid md:grid-cols-4 gap-6 text-center">
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-orange-600">2020-2021</div>
-                  <div className="text-sm font-medium">Technical Foundation</div>
-                  <div className="text-xs text-muted-foreground">IT Support & Systems</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-blue-600">2025</div>
-                  <div className="text-sm font-medium">Academic Leadership</div>
-                  <div className="text-xs text-muted-foreground">Tutoring & Mentorship</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-green-600">2025</div>
-                  <div className="text-sm font-medium">Research Assistant</div>
-                  <div className="text-xs text-muted-foreground">Autonomous Systems</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-purple-600">2025-2026</div>
-                  <div className="text-sm font-medium">Senior Research Fellow</div>
-                  <div className="text-xs text-muted-foreground">Publication Track</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

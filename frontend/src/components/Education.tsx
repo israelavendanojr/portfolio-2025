@@ -137,29 +137,8 @@ const Education = () => {
             </CardContent>
           </Card>
 
-          {/* Academic Highlights */}
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="pt-8">
-              <h3 className="text-xl font-bold mb-6 text-center">Academic Highlights</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-primary">2026</div>
-                  <div className="text-sm font-medium">Expected Graduation</div>
-                  <div className="text-xs text-muted-foreground">CS with Math Minor</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-green-600">CSCI 490</div>
-                  <div className="text-sm font-medium">Senior Research</div>
-                  <div className="text-xs text-muted-foreground">Publication Track</div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-2xl font-bold text-purple-600">3+</div>
-                  <div className="text-sm font-medium">Research Areas</div>
-                  <div className="text-xs text-muted-foreground">Interdisciplinary Focus</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          
+          
         </div>
       </div>
     </section>

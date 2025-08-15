@@ -63,16 +63,11 @@ const Contact = () => {
   const availability = [
     {
       period: "Summer 2026",
-      type: "Internship",
-      focus: "Research-focused SWE & AI/ML roles",
+      type: "Internship and New Grad Roles",
+      focus: "SWE, AI/ML, Robotics",
       status: "Actively Seeking"
     },
-    {
-      period: "June 2026",
-      type: "New Graduate",
-      focus: "Full-time AI/ML Engineer, Software Engineer, Research Engineer positions",
-      status: "Open to Opportunities"
-    }
+    
   ];
 
   return (
@@ -98,7 +93,7 @@ const Contact = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-1 gap-6">
                 {availability.map((item, index) => (
                   <div key={index} className="space-y-3">
                     <div className="flex items-center justify-center gap-2">
@@ -173,18 +168,18 @@ const Contact = () => {
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
                   <h4 className="font-semibold mb-2">Current Location</h4>
-                  <p className="text-muted-foreground">Bellingham, WA</p>
+                  <p className="text-muted-foreground">Greater Seattle Area</p>
                   <p className="text-sm text-muted-foreground">Pacific Northwest</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Work Preference</h4>
-                  <p className="text-muted-foreground">Hybrid/Remote Friendly</p>
-                  <p className="text-sm text-muted-foreground">Open to relocation</p>
+                  <p className="text-muted-foreground">Open to Relocation</p>
+                  <p className="text-sm text-muted-foreground">Friendly to remote work</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Ideal Team</h4>
-                  <p className="text-muted-foreground">Research-oriented</p>
-                  <p className="text-sm text-muted-foreground">Innovation focused</p>
+                  <h4 className="font-semibold mb-2">Visa Status</h4>
+                  <p className="text-muted-foreground">US Citizen</p>
+                  <p className="text-sm text-muted-foreground">No sponsorship needed</p>
                 </div>
               </div>
             </CardContent>
@@ -205,20 +200,21 @@ const Contact = () => {
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      AI/ML Engineer or Research Engineer positions
+                      AI/ML Engineering
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Software Engineering roles with research components
+                      Software Engineering
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Robotics/Autonomous Systems development
+                      Robotics and Autonomous Systems
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Computer Vision and ML infrastructure roles
+                      Research and Development
                     </li>
+                    
                   </ul>
                 </div>
                 <div>
@@ -230,15 +226,11 @@ const Contact = () => {
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Encourages cross-functional collaboration
-                    </li>
-                    <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Supports mentorship and knowledge sharing
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      Invests in research and development initiatives
+                      Focuses on creating solutions that solve meaningful, real-world problems.
                     </li>
                   </ul>
                 </div>

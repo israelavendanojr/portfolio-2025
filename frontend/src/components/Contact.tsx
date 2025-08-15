@@ -9,7 +9,7 @@ const Contact = () => {
   const [emailCopied, setEmailCopied] = useState(false);
   const { toast } = useToast();
 
-  const email = "israel.avendano@example.com";
+  const email = "israelavendanojr@gmail.com";
 
   const handleEmailCopy = async () => {
     try {
@@ -40,22 +40,22 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      value: "github.com/israelavendano",
-      href: "https://github.com",
+      value: "github.com/israelavendanojr",
+      href: "https://github.com/israelavendanojr",
       description: "View my code, projects, and contributions"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      value: "linkedin.com/in/israelavendano",
-      href: "https://linkedin.com",
+      value: "linkedin.com/in/israelavendanojr",
+      href: "https://www.linkedin.com/in/israelavendanojr",
       description: "Professional network and recommendations"
     },
     {
       icon: <FileText className="w-5 h-5" />,
       label: "Resume",
       value: "Download PDF",
-      href: "#",
+      href: "https://drive.google.com/file/d/1aQAlPaApBrpjEFNfYhax3YcZooGM118S/view?usp=sharing",
       description: "Detailed technical background and project summaries"
     }
   ];

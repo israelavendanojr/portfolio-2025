@@ -52,7 +52,7 @@ const Experience = () => {
       location: "Bellingham, WA",
       period: "Ongoing",
       type: "Leadership",
-      status: "Current",
+      status: "Recent",
       description: "Delivered end-to-end targeted outreach campaigns promoting cultural and academic events",
       achievements: [
         "Organized annual lowrider event drawing 200+ attendees and 50+ cars",

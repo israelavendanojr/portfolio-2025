@@ -9,11 +9,11 @@ const Projects = () => {
       title: "CrowdVision",
       subtitle: "Meta Hackathon Finalist",
       description: "Top 6 out of 300+ teams in 36-hour competition. Integrated real-time CV processing with LLM-powered safety analysis, handling 600+ video frames with RAG-enhanced decision making.",
-      tech: ["Python", "TypeScript", "Flask", "React", "LLaMA 4", "Computer Vision"],
+      tech: ["Python", "TypeScript", "Flask", "React", "LLaMA 4", "RoboFlow"],
       tags: ["Competition-Winner", "AI/ML", "Computer-Vision", "Full-Stack"],
       impact: "Demonstrated production-ready architecture for crowd safety automation",
       icon: <Trophy className="w-6 h-6" />,
-      status: "🏆 Winner",
+      status: "Winner",
       links: {
         demo: "#",
         github: "#",
@@ -24,11 +24,11 @@ const Projects = () => {
       title: "Recycling Classifier → Physical Automation",
       subtitle: "ML to Real-World Impact",
       description: "96% multi-class accuracy optimized for embedded deployment. Developing full physical sorting pipeline with automated waste stream classification.",
-      tech: ["Python", "PyTorch (MobileNetV2)", "OpenCV", "Raspberry Pi 5"],
+      tech: ["Python", "PyTorch (MobileNetV2)", "OpenCV", "Raspberry Pi 5", "NumPy", "Pandas", "Matplotlib"],
       tags: ["Machine-Learning", "Computer-Vision", "Embedded-Systems", "Sustainability"],
       impact: "Complete ML pipeline from data collection → model training → physical deployment → waste reduction impact",
       icon: <Cpu className="w-6 h-6" />,
-      status: "🤖 In Development",
+      status: "In Development",
       links: {
         github: "#",
         demo: "#"
@@ -42,7 +42,7 @@ const Projects = () => {
       tags: ["Fundamentals", "Mathematical-ML", "Algorithm-Implementation"],
       impact: "Deep understanding of optimization mechanics, gradient flow, and numerical stability",
       icon: <Brain className="w-6 h-6" />,
-      status: "📚 Educational",
+      status: "Educational",
       links: {
         github: "#",
         documentation: "#"
@@ -52,11 +52,11 @@ const Projects = () => {
       title: "myLiftPlan",
       subtitle: "Full-Stack Development",
       description: "Normalized database schema supporting 75+ exercises with secure user authentication. Personalized workout generation serving 10+ active users.",
-      tech: ["Flask", "JavaScript", "PostgreSQL", "Bootstrap"],
+      tech: ["Flask", "JavaScript", "PostgreSQL", "Bootstrap", "HTML", "CSS"],
       tags: ["Full-Stack", "Database-Design", "Web-Development"],
       impact: "Complete user authentication and session management system",
       icon: <Database className="w-6 h-6" />,
-      status: "🚀 Live",
+      status: "Live",
       links: {
         github: "#",
         demo: "#"

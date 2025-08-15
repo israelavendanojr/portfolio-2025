@@ -1,15 +1,20 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Mail, FileText, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 import heroImage from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
   const achievements = [
     "Meta Hackathon Finalist (Top 6/300+)",
     "Publication-Track Senior Research", 
-    "Autonomous Systems Research",
-    
-  ]
+   "Autonomous Systems Research",
+  ];
+
+  // Shared style for social buttons:
+  const socialBtn =
+    "bg-white text-black border border-black hover:bg-gray-100 " +
+    "dark:bg-transparent dark:text-white dark:border-white " +
+    "dark:hover:bg-white dark:hover:text-gray-900";
 
   const handleEmailClick = () => {
     navigator.clipboard.writeText('israelavendanojr@gmail.com');
@@ -82,12 +87,7 @@ const Hero = () => {
               </a>
             </Button>
             <div className="flex gap-3">
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-white border-white hover:bg-white hover:text-gray-900"
-                asChild
-              >
+              <Button variant="outline" size="lg" className={socialBtn} asChild>
                 <a 
                   href="https://github.com/israelavendanojr" 
                   target="_blank" 
@@ -97,12 +97,8 @@ const Hero = () => {
                   GitHub
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-white border-white hover:bg-white hover:text-gray-900"
-                asChild
-              >
+
+              <Button variant="outline" size="lg" className={socialBtn} asChild>
                 <a 
                   href="https://www.linkedin.com/in/israelavendanojr" 
                   target="_blank" 
@@ -112,13 +108,9 @@ const Hero = () => {
                   LinkedIn
                 </a>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-white border-white hover:bg-white hover:text-gray-900"
-                asChild
-              >
-                <a href="mailto:israelavendanojr@gmail.com">
+
+              <Button variant="outline" size="lg" className={socialBtn} asChild>
+                <a href="mailto:israelavendanojr@gmail.com" onClick={handleEmailClick}>
                   <Mail className="w-4 h-4 mr-2" />
                   Email
                 </a>
@@ -126,12 +118,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

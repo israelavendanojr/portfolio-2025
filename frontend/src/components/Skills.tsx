@@ -14,11 +14,11 @@ const Skills = () => {
         { name: "TypeScript", level: 85 },
         { name: "JavaScript", level: 80 },
         { name: "HTML/CSS", level: 90 },
-        { name: "Java", level: 75 },
-        { name: "C", level: 70 },
-        { name: "C++", level: 70 },
-        { name: "C#", level: 65 },
-        { name: "SQL (PostgreSQL)", level: 85 }
+        { name: "Java", level: 85 },
+        { name: "C#", level: 85 },
+        { name: "C", level: 75 },
+        { name: "C++", level: 69 },
+        { name: "SQL", level: 85 }
       ]
     },
     {
@@ -28,18 +28,18 @@ const Skills = () => {
       chartColor: "#10B981",
       skills: [
         { name: "React", level: 85 },
-        { name: "Flask", level: 90 },
+        { name: "Flask", level: 95 },
         { name: "PyTorch", level: 90 },
         { name: "Scikit-Learn", level: 85 },
         { name: "OpenCV", level: 90 },
-        { name: "NumPy", level: 95 },
+        { name: "NumPy", level: 90 },
         { name: "Pandas", level: 90 },
         { name: "Matplotlib", level: 85 },
         { name: "SeaBorn", level: 80 },
         { name: "LangChain", level: 75 },
         { name: "Tailwind", level: 85 },
         { name: "Bootstrap", level: 80 },
-        { name: "Unity", level: 70 }
+        { name: "Unity", level: 95 }
       ]
     },
     {
@@ -52,12 +52,12 @@ const Skills = () => {
         { name: "GitLab", level: 85 },
         { name: "VS Code", level: 95 },
         { name: "Visual Studio", level: 80 },
-        { name: "IntelliJ", level: 75 },
-        { name: "Linux/Unix", level: 85 },
-        { name: "Docker", level: 70 },
+        { name: "Docker", level: 69 },
+        { name: "Linux/Unix", level: 95 },
         { name: "Jupyter", level: 90 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "ROS2", level: 70 }
+        { name: "PostgreSQL", level: 95 },
+        { name: "SQLite", level: 95},
+        { name: "ROS2", level: 69 }
       ]
     }
   ];

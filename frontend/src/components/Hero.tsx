@@ -7,7 +7,7 @@ const Hero = () => {
   const achievements = [
     "Meta Hackathon Finalist (Top 6/300+)",
     "Publication-Track Senior Research", 
-   "Autonomous Systems Research",
+    "Autonomous Systems Research",
   ];
 
   // Shared style for social buttons:
@@ -32,15 +32,15 @@ const Hero = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-      <div className="section-container relative z-10 text-center text-white">
+      <div className="section-container relative z-10 text-center text-white px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Achievement Badges */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 fade-in">
+          <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mb-8 fade-in">
             {achievements.map((achievement, index) => (
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="badge-success text-xs px-3 py-1"
+                className="badge-success text-xs px-2 sm:px-3 py-1 text-center break-words max-w-full"
               >
                 {achievement}
               </Badge>
@@ -48,33 +48,33 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 fade-in leading-tight">
             <span className="block">Israel Avendano Jr</span>
           </h1>
 
           {/* Title & Subtitle */}
-          <div className="space-y-4 mb-8 fade-in">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-blue-200">
+          <div className="space-y-4 mb-8 fade-in px-2">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-blue-200 leading-tight">
               Software Engineer & Researcher
             </h2>
-            <p className="text-lg md:text-xl text-gray-200 font-mono">
+            <p className="text-base sm:text-lg md:text-xl text-gray-200 font-mono leading-relaxed">
               Applied AI/ML • Full-Stack Development • Autonomous Robotics
             </p>
           </div>
 
           {/* Meta Information */}
-          <div className="text-lg text-gray-300 mb-8 fade-in">
-            <p className="mb-2">Western Washington University • Graduating June 2026</p>
+          <div className="text-base sm:text-lg text-gray-300 mb-8 fade-in px-2">
+            <p className="mb-2 leading-relaxed">Western Washington University • Graduating June 2026</p>
             <p className="text-blue-200 font-semibold">
               Seeking Summer 2026 Roles
             </p>
           </div>
 
           {/* Call-to-Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 fade-in">
+          <div className="flex flex-col gap-4 justify-center items-center mb-12 fade-in px-2">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto"
               asChild
             >
               <a 
@@ -86,8 +86,10 @@ const Hero = () => {
                 Download Resume
               </a>
             </Button>
-            <div className="flex gap-3">
-              <Button variant="outline" size="lg" className={socialBtn} asChild>
+            
+            {/* Social Buttons Container */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+              <Button variant="outline" size="lg" className={`${socialBtn} flex-1 sm:flex-none`} asChild>
                 <a 
                   href="https://github.com/israelavendanojr" 
                   target="_blank" 
@@ -98,7 +100,7 @@ const Hero = () => {
                 </a>
               </Button>
 
-              <Button variant="outline" size="lg" className={socialBtn} asChild>
+              <Button variant="outline" size="lg" className={`${socialBtn} flex-1 sm:flex-none`} asChild>
                 <a 
                   href="https://www.linkedin.com/in/israelavendanojr" 
                   target="_blank" 
@@ -109,7 +111,7 @@ const Hero = () => {
                 </a>
               </Button>
 
-              <Button variant="outline" size="lg" className={socialBtn} asChild>
+              <Button variant="outline" size="lg" className={`${socialBtn} flex-1 sm:flex-none`} asChild>
                 <a href="mailto:israelavendanojr@gmail.com" onClick={handleEmailClick}>
                   <Mail className="w-4 h-4 mr-2" />
                   Email
@@ -117,8 +119,6 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>

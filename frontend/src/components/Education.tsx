@@ -83,7 +83,7 @@ const Education = () => {
                       <li>• Linear Algebra</li>
                       <li>• Probability & Statistics</li>
                       <li>• Multivariable Calculus</li>
-                      <li>• Discrete Mathematics</li>
+                      
                     </ul>
                   </div>
                 </div>

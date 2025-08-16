@@ -50,7 +50,7 @@ const Experience = () => {
       title: "Community Outreach Coordinator",
       company: "Latin Men in Higher Education",
       location: "Bellingham, WA",
-      period: "Ongoing",
+      period: "April 2024 – Jun 2025",
       type: "Leadership",
       status: "Recent",
       description: "Delivered end-to-end targeted outreach campaigns promoting cultural and academic events",

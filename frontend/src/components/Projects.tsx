@@ -8,16 +8,15 @@ const Projects = () => {
     {
       title: "CrowdVision",
       subtitle: "Meta Hackathon Finalist",
-      description: "Top 6 out of 300+ teams in 36-hour competition. Integrated real-time CV processing with LLM-powered safety analysis, handling 600+ video frames with RAG-enhanced decision making.",
+      description: "Top 6 teams out of 300+ participants in 36-hour competition. Integrated real-time CV processing with LLM-powered safety analysis, handling 600+ video frames with RAG-enhanced decision making.",
       tech: ["Python", "TypeScript", "Flask", "React", "LLaMA 4", "RoboFlow"],
       tags: ["Competition-Winner", "AI/ML", "Computer-Vision", "Full-Stack"],
       impact: "Demonstrated production-ready architecture for crowd safety automation",
       icon: <Trophy className="w-6 h-6" />,
       status: "Winner",
       links: {
-        demo: "#",
-        github: "#",
-        writeup: "#"
+        demo: "https://www.youtube.com/watch?v=bUo0xOwCAI0",
+        github: "https://github.com/israelavendanojr/crowd-vision",
       }
     },
     {
@@ -30,8 +29,8 @@ const Projects = () => {
       icon: <Cpu className="w-6 h-6" />,
       status: "In Development",
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/israelavendanojr/recycling-classifier",
+        // robot_repo: "https://github.com/israelavendanojr/recycling-robot"
       }
     },
     {
@@ -44,8 +43,7 @@ const Projects = () => {
       icon: <Brain className="w-6 h-6" />,
       status: "Educational",
       links: {
-        github: "#",
-        documentation: "#"
+        github: "https://github.com/israelavendanojr/neural-network",
       }
     },
     {
@@ -58,8 +56,8 @@ const Projects = () => {
       icon: <Database className="w-6 h-6" />,
       status: "Live",
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/israelavendanojr/workout-generator",
+        demo: "https://www.myliftplan.com/"
       }
     }
   ];

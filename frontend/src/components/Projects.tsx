@@ -77,7 +77,7 @@ const Projects = () => {
       title: "Single User Relational Database",
       subtitle: "Database Engine & Query Processing",
       description: "Java-based relational database engine implementing core relational algebra operations and SQL-like query parsing, with robust QA testing and schema design.",
-      tech: ["Java", "SQL", "Database Design", "JUnit", "IntelliJ"],
+      tech: ["Java", "SQL", "Database Design", "IntelliJ"],
       tags: ["Systems-Programming", "Database-Internals", "Query-Processing", "Relational Algebra"],
       impact: "Demonstrates low-level understanding of database execution pipelines, relational theory, and QA methodology.",
       icon: <Database className="w-6 h-6" />,

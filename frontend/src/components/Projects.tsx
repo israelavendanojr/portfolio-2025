@@ -47,6 +47,19 @@ const Projects = () => {
       }
     },
     {
+      title: "VentureMap",
+      subtitle: "AI Agent Powered Real-Time Activity Finder",
+      description: "Full-stack web app integrating RESTful APIs, AI agents, and geospatial services to deliver real-time, personalized activity recommendations. Developed in a 6-hour hackathon to address decision fatigue with intelligent, location-aware suggestions.",
+      tech: ["Python", "Flask", "React", "TypeScript", "Tailwind CSS", "Google Maps API", "Gemini AI"],
+      tags: ["Full-Stack", "REST-API", "Agentic-AI", "Geospatial-Computing"],
+      impact: "Showcases end-to-end system design combining AI reasoning, API orchestration, and responsive UI for a location-based service.",
+      icon: <ExternalLink className="w-6 h-6" />,
+      status: "Hackathon",
+      links: {
+        github: "https://github.com/Jeffrey-F-Guo/VentureMap",
+      }
+    },    
+    {
       title: "myLiftPlan",
       subtitle: "Full-Stack Development",
       description: "Normalized database schema supporting 75+ exercises with secure user authentication. Personalized workout generation serving 10+ active users.",
@@ -58,6 +71,19 @@ const Projects = () => {
       links: {
         github: "https://github.com/israelavendanojr/workout-generator",
         demo: "https://www.myliftplan.com/"
+      }
+    },
+    {
+      title: "Single User Relational Database",
+      subtitle: "Database Engine & Query Processing",
+      description: "Java-based relational database engine implementing core relational algebra operations and SQL-like query parsing, with robust QA testing and schema design.",
+      tech: ["Java", "SQL", "Database Design", "JUnit", "IntelliJ"],
+      tags: ["Systems-Programming", "Database-Internals", "Query-Processing", "Relational Algebra"],
+      impact: "Demonstrates low-level understanding of database execution pipelines, relational theory, and QA methodology.",
+      icon: <Database className="w-6 h-6" />,
+      status: "Educational",
+      links: {
+        
       }
     }
   ];
@@ -78,8 +104,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ordered by technical depth and uniqueness — showcasing the rare intersection 
-            of AI/ML, robotics, and software engineering fundamentals.
+          A curated selection of projects demonstrating technical range, innovation, and practical application.
           </p>
         </div>
 

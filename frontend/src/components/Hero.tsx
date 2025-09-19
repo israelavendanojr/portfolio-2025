@@ -78,7 +78,7 @@ const Hero = () => {
               asChild
             >
               <a 
-                href="https://drive.google.com/file/d/1aQAlPaApBrpjEFNfYhax3YcZooGM118S/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1F9xxL17S5oqesfZs1XPBCa_TZntTdPpw/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

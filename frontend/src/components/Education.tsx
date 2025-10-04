@@ -22,7 +22,7 @@ const Education = () => {
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg">
+                  <div className="p-3 bg-[hsl(var(--accent-green-soft))] text-accent-green dark:bg-[hsl(var(--accent-green-soft))] dark:text-accent-green rounded-lg">
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <div>
@@ -37,7 +37,7 @@ const Education = () => {
                     </div>
                   </div>
                 </div>
-                <Badge className="badge-primary">
+                <Badge className="badge-green">
                   Current
                 </Badge>
               </div>
@@ -48,7 +48,7 @@ const Education = () => {
               {/* Relevant Coursework */}
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <BookOpen className="w-5 h-5 text-gray-900 dark:text-gray-100" />
+                  <BookOpen className="w-5 h-5 text-accent-green" />
                   <h4 className="font-semibold">Relevant Coursework</h4>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -78,7 +78,7 @@ const Education = () => {
               <div>
                 <h4 className="font-semibold mb-3">Research Interests</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-300">Autonomous Vehicle Safety</Badge>
+                  <Badge variant="outline" className="border-accent-green text-accent-green">Autonomous Vehicle Safety</Badge>
                   <Badge variant="outline" className="border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-300">Human-Robot Interaction</Badge>
                   <Badge variant="outline" className="border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-300">Agentic AI Systems</Badge>
                   <Badge variant="outline" className="border-gray-300 text-gray-700 dark:border-gray-700 dark:text-gray-300">AI/ML Applications</Badge>

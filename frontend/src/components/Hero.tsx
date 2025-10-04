@@ -40,7 +40,7 @@ const Hero = () => {
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="badge-success text-xs px-2 sm:px-3 py-1 text-center break-words max-w-full"
+                className={index === 0 ? "badge-green text-xs px-2 sm:px-3 py-1" : "badge-light text-xs px-2 sm:px-3 py-1"}
               >
                 {achievement}
               </Badge>
@@ -74,11 +74,11 @@ const Hero = () => {
           <div className="flex flex-col gap-4 justify-center items-center mb-12 fade-in px-2">
             <Button 
               size="lg" 
-              className="bg-gray-900 hover:bg-gray-800 text-white w-full sm:w-auto dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-gray-900"
+              className="bg-[hsl(var(--accent-green))] hover:bg-[hsl(var(--accent-green-muted))] text-white w-full sm:w-auto"
               asChild
             >
               <a 
-                href="https://drive.google.com/file/d/1F9xxL17S5oqesfZs1XPBCa_TZntTdPpw/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1svCshflcABXvidK82O-U9rBFY6JzN5Ct/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

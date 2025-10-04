@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Trophy, Cpu, Brain, Database } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const Projects = () => {
   const projects = [
@@ -89,10 +90,10 @@ const Projects = () => {
   ];
 
   const getStatusColor = (status: string) => {
-    if (status.includes("Winner")) return "badge-dark";
+    if (status.includes("Winner")) return "badge-green";
     if (status.includes("Development")) return "badge-medium";
     if (status.includes("Educational")) return "badge-light";
-    if (status.includes("Live")) return "badge-medium";
+    if (status.includes("Live")) return "badge-green-soft";
     if (status.includes("Hackathon")) return "badge-light";
     return "badge-medium";
   };
@@ -115,7 +116,12 @@ const Projects = () => {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-gray-100 dark:group-hover:text-gray-900 transition-colors">
+                    <div className={cn(
+                      "p-3 rounded-lg transition-colors",
+                      project.status === "Winner" 
+                        ? "bg-[hsl(var(--accent-green-soft))] text-accent-green group-hover:bg-[hsl(var(--accent-green))] group-hover:text-white"
+                        : "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-gray-100 dark:group-hover:text-gray-900"
+                    )}>
                       {project.icon}
                     </div>
                     <div>
@@ -166,9 +172,9 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex flex-wrap gap-3 pt-2">
                   {Object.entries(project.links).map(([type, url]) => (
-                    <Button key={type} variant="outline" size="sm" asChild>
+                    <Button key={type} variant="outline" size="sm" className="hover:border-accent-green hover:text-accent-green group" asChild>
                       <a href={url} target="_blank" rel="noopener noreferrer">
-                        {type === 'github' ? <Github className="w-4 h-4 mr-2" /> : <ExternalLink className="w-4 h-4 mr-2" />}
+                        {type === 'github' ? <Github className="w-4 h-4 mr-2 group-hover:text-accent-green" /> : <ExternalLink className="w-4 h-4 mr-2 group-hover:text-accent-green" />}
                         {type.charAt(0).toUpperCase() + type.slice(1)}
                       </a>
                     </Button>

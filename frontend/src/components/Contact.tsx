@@ -55,7 +55,7 @@ const Contact = () => {
       icon: <FileText className="w-5 h-5" />,
       label: "Resume",
       value: "Download PDF",
-      href: "https://drive.google.com/file/d/1F9xxL17S5oqesfZs1XPBCa_TZntTdPpw/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1svCshflcABXvidK82O-U9rBFY6JzN5Ct/view?usp=sharing",
       description: "Detailed technical background and project summaries"
     }
   ];
@@ -88,7 +88,7 @@ const Contact = () => {
           <Card className="text-center">
             <CardHeader>
               <CardTitle className="flex items-center justify-center gap-2">
-                <Calendar className="w-5 h-5 text-gray-900 dark:text-gray-100" />
+                <Calendar className="w-5 h-5 text-accent-green" />
                 Current Availability
               </CardTitle>
             </CardHeader>
@@ -97,7 +97,7 @@ const Contact = () => {
                 {availability.map((item, index) => (
                   <div key={index} className="space-y-3">
                     <div className="flex items-center justify-center gap-2">
-                      <Badge className="badge-success">{item.status}</Badge>
+                      <Badge className="badge-green">{item.status}</Badge>
                       <span className="font-medium">{item.period}</span>
                     </div>
                     <div>
@@ -116,7 +116,7 @@ const Contact = () => {
               <Card key={index} className="hover-lift group">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-gray-100 dark:group-hover:text-gray-900 transition-colors">
+                    <div className="p-2 bg-[hsl(var(--accent-green-soft))] text-accent-green dark:bg-[hsl(var(--accent-green-soft))] dark:text-accent-green rounded-lg group-hover:bg-[hsl(var(--accent-green))] group-hover:text-white transition-colors">
                       {method.icon}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -131,7 +131,7 @@ const Contact = () => {
                           className="w-full justify-start"
                         >
                           {emailCopied ? (
-                            <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                            <CheckCircle className="w-4 h-4 mr-2 text-accent-green" />
                           ) : (
                             <Copy className="w-4 h-4 mr-2" />
                           )}
@@ -160,7 +160,7 @@ const Contact = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-gray-900 dark:text-gray-100" />
+                <MapPin className="w-5 h-5 text-accent-green" />
                 Location & Work Preferences
               </CardTitle>
             </CardHeader>

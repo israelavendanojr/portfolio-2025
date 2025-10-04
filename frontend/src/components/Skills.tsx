@@ -7,8 +7,8 @@ const Skills = () => {
     {
       title: "Languages",
       icon: <Code2 className="w-6 h-6" />,
-      color: "text-gray-900 dark:text-gray-100",
-      chartColor: "#1f2937",
+      color: "text-accent-green",
+      chartColor: "hsl(var(--accent-green))",
       skills: [
         { name: "Python", level: 95 },
         { name: "TypeScript", level: 85 },
@@ -24,8 +24,8 @@ const Skills = () => {
     {
       title: "Frameworks & Libraries",
       icon: <Package className="w-6 h-6" />,
-      color: "text-gray-900 dark:text-gray-100",
-      chartColor: "#374151",
+      color: "text-accent-green",
+      chartColor: "hsl(var(--accent-green))",
       skills: [
         { name: "React", level: 85 },
         { name: "Flask", level: 95 },
@@ -47,8 +47,8 @@ const Skills = () => {
     {
       title: "Tools & Technologies",
       icon: <Wrench className="w-6 h-6" />,
-      color: "text-gray-900 dark:text-gray-100",
-      chartColor: "#4b5563",
+      color: "text-accent-green",
+      chartColor: "hsl(var(--accent-green))",
       skills: [
         { name: "GitHub", level: 95 },
         { name: "GitLab", level: 85 },
@@ -77,12 +77,6 @@ const Skills = () => {
     }));
   };
 
-  const getProficiencyLevel = (level) => {
-    if (level >= 90) return { label: "Expert", color: "text-green-600 dark:text-green-400" };
-    if (level >= 80) return { label: "Advanced", color: "text-blue-600 dark:text-blue-400" };
-    if (level >= 70) return { label: "Proficient", color: "text-purple-600 dark:text-purple-400" };
-    return { label: "Intermediate", color: "text-orange-600 dark:text-orange-400" };
-  };
 
   return (
     <section id="skills" className="section-padding bg-muted/30">
@@ -144,7 +138,7 @@ const Skills = () => {
                 {/* Skill List */}
                 <div className="space-y-3">
                   <h4 className="font-semibold text-sm mb-3">All Skills</h4>
-                  <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
+                  <div className="grid grid-cols-2 gap-2">
                     {category.skills
                       .sort((a, b) => b.level - a.level)
                       .map((skill, skillIndex) => (

@@ -48,6 +48,12 @@ All colors MUST be HSL.
     --success: 0 0% 20%;               /* Success as charcoal */
     --warning: 0 0% 40%;               /* Warning as medium grey */
 
+    /* Forest Green Accent Colors - Light Mode */
+    --accent-green: 142 45% 35%;           /* Deep forest green */
+    --accent-green-foreground: 0 0% 98%;   /* White text on green */
+    --accent-green-soft: 142 30% 92%;      /* Very light green tint */
+    --accent-green-muted: 142 35% 25%;     /* Darker forest green */
+
     /* Layout & Spacing */
     --section-padding: 5rem;
     --content-width: 1200px;
@@ -90,6 +96,12 @@ All colors MUST be HSL.
 
     --code-bg: 0 0% 5%;                /* Near black */
     --code-text: 0 0% 85%;
+
+    /* Forest Green Accent Colors - Dark Mode */
+    --accent-green: 142 40% 45%;           /* Lighter forest green for dark mode */
+    --accent-green-foreground: 0 0% 10%;   /* Dark text on green */
+    --accent-green-soft: 142 35% 15%;      /* Dark green tint */
+    --accent-green-muted: 142 45% 55%;     /* Brighter forest green */
   }
 }
 
@@ -189,5 +201,32 @@ All colors MUST be HSL.
 
   .glass-effect {
     @apply backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 border border-white/20 dark:border-gray-800/20;
+  }
+
+  /* Forest Green Utility Classes */
+  .badge-green {
+    @apply bg-[hsl(var(--accent-green))] text-[hsl(var(--accent-green-foreground))] 
+           border-[hsl(var(--accent-green))];
+  }
+
+  .badge-green-soft {
+    @apply bg-[hsl(var(--accent-green-soft))] text-[hsl(var(--accent-green))] 
+           border-[hsl(var(--accent-green))]/30;
+  }
+
+  .text-accent-green {
+    @apply text-[hsl(var(--accent-green))];
+  }
+
+  .bg-accent-green {
+    @apply bg-[hsl(var(--accent-green))];
+  }
+
+  .border-accent-green {
+    @apply border-[hsl(var(--accent-green))];
+  }
+
+  .hover-accent-green {
+    @apply hover:bg-[hsl(var(--accent-green))] hover:text-[hsl(var(--accent-green-foreground))];
   }
 }

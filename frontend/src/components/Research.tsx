@@ -33,8 +33,8 @@ const Research = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "Publication Track": return "badge-dark";
-      case "Technical Lead": return "badge-dark";
+      case "Publication Track": return "badge-green";
+      case "Technical Lead": return "badge-green";
       default: return "badge-medium";
     }
   };
@@ -55,7 +55,7 @@ const Research = () => {
         {/* Active Research Projects */}
         <div>
           <h3 className="text-2xl font-bold mb-8 flex items-center">
-            <Calendar className="w-6 h-6 mr-3 text-gray-900 dark:text-gray-100" />
+            <Calendar className="w-6 h-6 mr-3 text-accent-green" />
             Active Research Projects
           </h3>
           
@@ -65,7 +65,7 @@ const Research = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg">
+                      <div className="p-2 bg-[hsl(var(--accent-green-soft))] text-accent-green dark:bg-[hsl(var(--accent-green-soft))] dark:text-accent-green rounded-lg">
                         {project.icon}
                       </div>
                       <div>

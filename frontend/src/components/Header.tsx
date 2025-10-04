@@ -56,7 +56,7 @@ const Header = () => {
           <div className="flex items-center">
             <button 
               onClick={() => handleNavClick('#hero')}
-              className="text-xl font-mono font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-xl font-mono font-semibold text-foreground hover:text-accent-green transition-colors"
             >
               Israel Avendano Jr
             </button>
@@ -68,7 +68,7 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-accent-green transition-colors"
               >
                 {item.label}
               </button>
@@ -114,7 +114,7 @@ const Header = () => {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="block w-full text-left px-3 py-2 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                  className="block w-full text-left px-3 py-2 text-base font-medium text-muted-foreground hover:text-accent-green hover:bg-accent rounded-md transition-colors"
                 >
                   {item.label}
                 </button>

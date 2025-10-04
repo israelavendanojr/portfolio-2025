@@ -5,67 +5,53 @@ import { Calendar, MapPin, TrendingUp } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Research Fellow",
-      company: "Western Washington University",
+      title: "IT Support Specialist",
+      company: "ATUS Help Desk",
       location: "Bellingham, WA",
-      period: "Fall 2025 – Spring 2026",
-      type: "Research",
-      status: "Upcoming",
-      description: "Selected for CSCI 490 Senior Research: Software Reliability & Safety based on Human Errors and AI",
+      period: "Oct 2025 – Present",
+      type: "Technical",
+      status: "Current",
+      description: "Providing Tier 1 and 2 IT support for 500+ users weekly with focus on critical issue resolution",
       achievements: [
-        "Collaborating with Dr. Fuqun Huang on interdisciplinary research combining human error theory, eye-tracking, and AI",
-        "Targeting publication in refereed conference/journal Spring 2026",
-        "Leading 3-person research team on novel software dependability methods"
+        "Resolving critical issues to ensure high operational continuity across campus",
+        "Providing autonomous troubleshooting and problem-solving for diverse technical challenges",
+        "Supporting 500+ users weekly with systematic approach to technical support"
+      ]
+    },
+    {
+      title: "Autonomous Vehicle Researcher",
+      company: "Huang Research Lab",
+      location: "Bellingham, WA",
+      period: "Sep 2025 – Present",
+      type: "Research",
+      status: "Current",
+      description: "Developing novel safety mechanism for autonomous vehicles targeting Spring 2026 publication",
+      achievements: [
+        "Accelerating critical scenario detection for autonomous vehicles",
+        "Working with C++, Autoware, and ROS for autonomous vehicle safety research",
+        "Targeting publication in Spring 2026 for novel safety mechanism development"
       ]
     },
     {
       title: "Robotics Research Assistant",
-      company: "Western Washington University",
+      company: "MRRP Lab",
       location: "Bellingham, WA",
       period: "Apr 2025 – Present",
       type: "Research",
       status: "Current",
-      description: "Early-stage research on natural language processing for autonomous UAV control systems",
+      description: "Technical Lead developing autonomous UAV agent converting NLP commands to executable flight plans",
       achievements: [
-        "Exploring LLM integration with ROS2 for intuitive robotic task planning",
-        "Developing natural language to temporal logic translation systems",
-        "Contributing to cutting-edge autonomous systems research"
-      ]
-    },
-    {
-      title: "Computer Science Tutor",
-      company: "Western Washington University",
-      location: "Bellingham, WA",
-      period: "Jan 2025 – Jun 2025",
-      type: "Academic",
-      status: "Recent",
-      description: "Provided 35+ hours of technical mentorship across data structures, algorithms, and systems",
-      achievements: [
-        "Improved student assignment completion rates through targeted debugging assistance",
-        "Developed teaching materials for complex CS concepts",
-        "Mentored 10+ students in core computer science fundamentals"
-      ]
-    },
-    {
-      title: "Community Outreach Coordinator",
-      company: "Latin Men in Higher Education",
-      location: "Bellingham, WA",
-      period: "April 2024 – Jun 2025",
-      type: "Leadership",
-      status: "Recent",
-      description: "Delivered end-to-end targeted outreach campaigns promoting cultural and academic events",
-      achievements: [
-        "Organized annual lowrider event drawing 200+ attendees and 50+ cars",
-        "Demonstrated ability to engage and mobilize large, diverse student audiences",
-        "Boosted visibility and engagement among underrepresented students in higher education",
-        "Promoted 15+ cultural and academic events with strategic outreach campaigns"
+        "Leading development of autonomous UAV agent converting NLP commands to executable flight plans",
+        "Establishing novel research framework for Human-Robot Interaction and Agentic Reasoning",
+        "Fine-tuned LLM using Ollama and HuggingFace (30% accuracy improvement in multi-agentic LangGraph workflow)",
+        "Directed concurrent development of ROS2/Gazebo UAV simulation and C++ embedded flight controller for Crazyflie 2.0 (40% reduction in projected development time)"
       ]
     },
     {
       title: "Information Technology Intern",
       company: "Skagit Valley College",
       location: "Mount Vernon, WA",
-      period: "Sep 2020 – Sep 2021",
+      period: "Sep 2022 – Sep 2023",
       type: "Technical",
       status: "Early Career",
       description: "Resolved 100+ technical support tickets with systematic troubleshooting approach",

@@ -44,21 +44,6 @@ const Education = () => {
             </CardHeader>
             
             <CardContent className="space-y-6">
-              {/* Senior Research Project */}
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold">Senior Research Project</h4>
-                  <Badge className="badge-success text-xs">Publication Track</Badge>
-                </div>
-                <p className="text-muted-foreground mb-2">
-                  <strong>Software Reliability & Safety (CSCI 490)</strong> - Selected for publication-track research
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Interdisciplinary research combining human error theory, eye-tracking technology, and AI 
-                  to develop novel methods for software dependability assessment.
-                </p>
-              </div>
 
               {/* Relevant Coursework */}
               <div>
@@ -93,9 +78,9 @@ const Education = () => {
               <div>
                 <h4 className="font-semibold mb-3">Research Interests</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">Software Dependability</Badge>
-                  <Badge variant="outline">Human-Computer Interaction</Badge>
-                  <Badge variant="outline">Autonomous Systems</Badge>
+                  <Badge variant="outline">Autonomous Vehicle Safety</Badge>
+                  <Badge variant="outline">Human-Robot Interaction</Badge>
+                  <Badge variant="outline">Agentic AI Systems</Badge>
                   <Badge variant="outline">AI/ML Applications</Badge>
                   <Badge variant="outline">Robotics Integration</Badge>
                 </div>

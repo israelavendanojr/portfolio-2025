@@ -16,8 +16,8 @@ const Skills = () => {
         { name: "HTML/CSS", level: 90 },
         { name: "Java", level: 85 },
         { name: "C#", level: 85 },
-        { name: "C", level: 75 },
-        { name: "C++", level: 69 },
+        { name: "C", level: 80 },
+        { name: "C++", level: 80 },
         { name: "SQL", level: 85 }
       ]
     },
@@ -36,7 +36,9 @@ const Skills = () => {
         { name: "Pandas", level: 90 },
         { name: "Matplotlib", level: 85 },
         { name: "SeaBorn", level: 80 },
-        { name: "LangChain", level: 75 },
+        { name: "LangChain", level: 80 },
+        { name: "Ollama", level: 80 },
+        { name: "HuggingFace", level: 80 },
         { name: "Tailwind", level: 85 },
         { name: "Bootstrap", level: 80 },
         { name: "Unity", level: 95 }
@@ -52,12 +54,14 @@ const Skills = () => {
         { name: "GitLab", level: 85 },
         { name: "VS Code", level: 95 },
         { name: "Visual Studio", level: 80 },
-        { name: "Docker", level: 69 },
+        { name: "Docker", level: 80 },
         { name: "Linux/Unix", level: 95 },
         { name: "Jupyter", level: 90 },
         { name: "PostgreSQL", level: 95 },
         { name: "SQLite", level: 95},
-        { name: "ROS2", level: 69 }
+        { name: "ROS2", level: 80 },
+        { name: "Autoware", level: 80 },
+        { name: "Gazebo", level: 80 }
       ]
     }
   ];
@@ -137,26 +141,17 @@ const Skills = () => {
                   </ResponsiveContainer>
                 </div>
 
-                {/* Skill List with Levels */}
+                {/* Skill List */}
                 <div className="space-y-3">
                   <h4 className="font-semibold text-sm mb-3">All Skills</h4>
                   <div className="grid grid-cols-1 gap-2 max-h-48 overflow-y-auto">
                     {category.skills
                       .sort((a, b) => b.level - a.level)
-                      .map((skill, skillIndex) => {
-                        const proficiency = getProficiencyLevel(skill.level);
-                        return (
-                          <div key={skillIndex} className="flex justify-between items-center text-sm">
-                            <span className="font-medium">{skill.name}</span>
-                            <div className="flex items-center gap-2">
-                              {/* <span className="text-xs text-muted-foreground">{skill.level}%</span> */}
-                              <span className={`text-xs font-medium ${proficiency.color}`}>
-                                {proficiency.label}
-                              </span>
-                            </div>
-                          </div>
-                        );
-                      })}
+                      .map((skill, skillIndex) => (
+                        <div key={skillIndex} className="text-sm">
+                          <span className="font-medium">{skill.name}</span>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </CardContent>

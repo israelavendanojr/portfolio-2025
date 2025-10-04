@@ -6,8 +6,8 @@ import heroImage from '@/assets/hero-bg.jpg';
 const Hero = () => {
   const achievements = [
     "Meta Hackathon Finalist (Top 6/300+)",
-    "Publication-Track Senior Research", 
     "Autonomous Systems Research",
+    "Multi-Lab Research Leadership",
   ];
 
   // Shared style for social buttons:
@@ -58,7 +58,7 @@ const Hero = () => {
               Software Engineer & Researcher
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 font-mono leading-relaxed">
-              Applied AI/ML • Full-Stack Development • Autonomous Robotics
+              AI/ML Engineering • Autonomous Systems • Full-Stack Development
             </p>
           </div>
 

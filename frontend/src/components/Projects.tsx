@@ -83,7 +83,7 @@ const Projects = () => {
       icon: <Database className="w-6 h-6" />,
       status: "Educational",
       links: {
-        
+        github: "https://github.com/israelavendanojr/single-user-database"
       }
     }
   ];

@@ -12,8 +12,8 @@ const Hero = () => {
 
   // Shared style for social buttons:
   const socialBtn =
-    "bg-white text-black border border-black hover:bg-gray-100 " +
-    "dark:bg-transparent dark:text-white dark:border-white " +
+    "bg-white text-black border-2 border-black hover:bg-gray-100 " +
+    "dark:bg-transparent dark:text-white dark:border-2 dark:border-white " +
     "dark:hover:bg-white dark:hover:text-gray-900";
 
   const handleEmailClick = () => {
@@ -26,7 +26,7 @@ const Hero = () => {
       id="hero" 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -54,7 +54,7 @@ const Hero = () => {
 
           {/* Title & Subtitle */}
           <div className="space-y-4 mb-8 fade-in px-2">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-blue-200 leading-tight">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-200 leading-tight">
               Software Engineer & Researcher
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-200 font-mono leading-relaxed">
@@ -65,7 +65,7 @@ const Hero = () => {
           {/* Meta Information */}
           <div className="text-base sm:text-lg text-gray-300 mb-8 fade-in px-2">
             <p className="mb-2 leading-relaxed">Western Washington University • Graduating June 2026</p>
-            <p className="text-blue-200 font-semibold">
+            <p className="text-gray-200 font-semibold">
               Seeking Summer 2026 Roles
             </p>
           </div>
@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="flex flex-col gap-4 justify-center items-center mb-12 fade-in px-2">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto"
+              className="bg-gray-900 hover:bg-gray-800 text-white w-full sm:w-auto dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-gray-900"
               asChild
             >
               <a 

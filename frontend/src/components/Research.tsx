@@ -33,9 +33,9 @@ const Research = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "Publication Track": return "badge-primary";
-      case "Technical Lead": return "badge-success";
-      default: return "badge-primary";
+      case "Publication Track": return "badge-dark";
+      case "Technical Lead": return "badge-dark";
+      default: return "badge-medium";
     }
   };
 
@@ -55,7 +55,7 @@ const Research = () => {
         {/* Active Research Projects */}
         <div>
           <h3 className="text-2xl font-bold mb-8 flex items-center">
-            <Calendar className="w-6 h-6 mr-3 text-primary" />
+            <Calendar className="w-6 h-6 mr-3 text-gray-900 dark:text-gray-100" />
             Active Research Projects
           </h3>
           
@@ -65,7 +65,7 @@ const Research = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                      <div className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg">
                         {project.icon}
                       </div>
                       <div>
@@ -87,7 +87,7 @@ const Research = () => {
                   <ul className="space-y-2">
                     {project.details.map((detail, i) => (
                       <li key={i} className="flex items-start">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         <span className="text-sm text-muted-foreground">{detail}</span>
                       </li>
                     ))}

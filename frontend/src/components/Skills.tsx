@@ -7,8 +7,8 @@ const Skills = () => {
     {
       title: "Languages",
       icon: <Code2 className="w-6 h-6" />,
-      color: "text-blue-600",
-      chartColor: "#3B82F6",
+      color: "text-gray-900 dark:text-gray-100",
+      chartColor: "#1f2937",
       skills: [
         { name: "Python", level: 95 },
         { name: "TypeScript", level: 85 },
@@ -24,8 +24,8 @@ const Skills = () => {
     {
       title: "Frameworks & Libraries",
       icon: <Package className="w-6 h-6" />,
-      color: "text-green-600",
-      chartColor: "#10B981",
+      color: "text-gray-900 dark:text-gray-100",
+      chartColor: "#374151",
       skills: [
         { name: "React", level: 85 },
         { name: "Flask", level: 95 },
@@ -47,8 +47,8 @@ const Skills = () => {
     {
       title: "Tools & Technologies",
       icon: <Wrench className="w-6 h-6" />,
-      color: "text-purple-600",
-      chartColor: "#8B5CF6",
+      color: "text-gray-900 dark:text-gray-100",
+      chartColor: "#4b5563",
       skills: [
         { name: "GitHub", level: 95 },
         { name: "GitLab", level: 85 },
@@ -102,7 +102,7 @@ const Skills = () => {
             <Card key={index} className="hover-lift">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-3">
-                  <div className={`${category.color}`}>
+                  <div className="text-gray-900 dark:text-gray-100">
                     {category.icon}
                   </div>
                   <span>{category.title}</span>

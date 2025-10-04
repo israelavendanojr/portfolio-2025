@@ -89,11 +89,12 @@ const Projects = () => {
   ];
 
   const getStatusColor = (status: string) => {
-    if (status.includes("Winner")) return "badge-success";
-    if (status.includes("Development")) return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800";
-    if (status.includes("Educational")) return "bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800";
-    if (status.includes("Live")) return "badge-primary";
-    return "badge-primary";
+    if (status.includes("Winner")) return "badge-dark";
+    if (status.includes("Development")) return "badge-medium";
+    if (status.includes("Educational")) return "badge-light";
+    if (status.includes("Live")) return "badge-medium";
+    if (status.includes("Hackathon")) return "badge-light";
+    return "badge-medium";
   };
 
   return (
@@ -114,7 +115,7 @@ const Projects = () => {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="p-3 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-gray-100 dark:group-hover:text-gray-900 transition-colors">
                       {project.icon}
                     </div>
                     <div>

@@ -8,45 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Technical Portfolio Design System */
-    --background: 250 50% 98%;
-    --foreground: 0 0% 11%;
+    /* Monochrome Portfolio Design System */
+    --background: 0 0% 100%;           /* Pure white */
+    --foreground: 0 0% 10%;            /* Near black */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 11%;
+    --card: 0 0% 98%;                  /* Off-white */
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 11%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 10%;
 
-    /* Primary: Technical Blue */
-    --primary: 214 90% 52%;
-    --primary-foreground: 0 0% 100%;
-    --primary-soft: 214 60% 96%;
+    /* Primary: Charcoal */
+    --primary: 0 0% 20%;               /* Charcoal (replaces blue) */
+    --primary-foreground: 0 0% 98%;
+    --primary-soft: 0 0% 95%;
 
-    /* Secondary: Neutral Grays */
-    --secondary: 210 11% 85%;
-    --secondary-foreground: 0 0% 11%;
+    /* Secondary: Light grey */
+    --secondary: 0 0% 88%;             /* Light grey */
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 210 11% 93%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 94%;                 /* Very light grey */
+    --muted-foreground: 0 0% 45%;      /* Medium grey */
 
-    --accent: 214 20% 92%;
-    --accent-foreground: 0 0% 11%;
+    --accent: 0 0% 92%;                /* Accent grey */
+    --accent-foreground: 0 0% 20%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 90% 52%;
+    --border: 0 0% 88%;                /* Border grey */
+    --input: 0 0% 88%;
+    --ring: 0 0% 30%;                  /* Focus ring dark grey */
 
     --radius: 0.5rem;
 
-    /* Technical Highlights */
-    --code-bg: 220 13% 18%;
-    --code-text: 210 11% 85%;
-    --success: 142 76% 36%;
-    --warning: 45 93% 47%;
+    /* Code blocks */
+    --code-bg: 0 0% 15%;               /* Code background dark */
+    --code-text: 0 0% 90%;             /* Code text light */
+    --success: 0 0% 20%;               /* Success as charcoal */
+    --warning: 0 0% 40%;               /* Warning as medium grey */
 
     /* Layout & Spacing */
     --section-padding: 5rem;
@@ -58,38 +58,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark mode: Technical Lab Aesthetic */
-    --background: 0 0% 11%;
-    --foreground: 210 11% 93%;
+    /* Dark mode: Monochrome Aesthetic */
+    --background: 0 0% 8%;             /* Deep charcoal */
+    --foreground: 0 0% 95%;            /* Off-white */
 
-    --card: 220 13% 14%;
-    --card-foreground: 210 11% 93%;
+    --card: 0 0% 12%;                  /* Slightly lighter charcoal */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 13% 14%;
-    --popover-foreground: 210 11% 93%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 214 90% 60%;
-    --primary-foreground: 0 0% 11%;
-    --primary-soft: 214 60% 15%;
+    --primary: 0 0% 90%;               /* Light grey (inverted) */
+    --primary-foreground: 0 0% 10%;
+    --primary-soft: 0 0% 18%;
 
-    --secondary: 220 13% 18%;
-    --secondary-foreground: 210 11% 93%;
+    --secondary: 0 0% 20%;             /* Dark grey */
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 13% 18%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 0 0% 18%;                 /* Muted dark */
+    --muted-foreground: 0 0% 60%;      /* Medium light grey */
 
-    --accent: 220 13% 18%;
-    --accent-foreground: 210 11% 93%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 0 0% 90%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 11% 93%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 220 13% 18%;
-    --input: 220 13% 18%;
-    --ring: 214 90% 60%;
+    --border: 0 0% 22%;                /* Subtle border */
+    --input: 0 0% 22%;
+    --ring: 0 0% 70%;                  /* Focus ring light grey */
 
-    --code-bg: 220 13% 9%;
-    --code-text: 210 11% 85%;
+    --code-bg: 0 0% 5%;                /* Near black */
+    --code-text: 0 0% 85%;
   }
 }
 
@@ -147,19 +147,44 @@ All colors MUST be HSL.
   }
 
   .tag {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
+           bg-gray-100 text-gray-900 border border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700;
   }
 
+  /* Monochrome Badge System */
+  .badge-dark {
+    @apply bg-gray-900 text-white border-gray-900 
+           dark:bg-gray-100 dark:text-gray-900 dark:border-gray-100;
+  }
+
+  .badge-medium {
+    @apply bg-gray-700 text-white border-gray-700 
+           dark:bg-gray-300 dark:text-gray-900 dark:border-gray-300;
+  }
+
+  .badge-light {
+    @apply bg-gray-200 text-gray-900 border-gray-300 
+           dark:bg-gray-800 dark:text-gray-100 dark:border-gray-700;
+  }
+
+  .badge-outline-dark {
+    @apply bg-transparent text-gray-900 border-2 border-gray-900 
+           dark:text-gray-100 dark:border-gray-100;
+  }
+
+  /* Legacy badge classes for compatibility */
   .badge-success {
-    @apply bg-green-50 text-green-700 border-green-200 dark:bg-green-900/20 dark:text-green-300 dark:border-green-800;
+    @apply badge-dark;
   }
 
   .badge-primary {
-    @apply bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800;
+    @apply badge-medium;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent;
+    /* Remove gradient, use solid color */
+    @apply text-gray-900 dark:text-gray-100;
   }
 
   .glass-effect {

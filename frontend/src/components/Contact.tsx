@@ -88,7 +88,7 @@ const Contact = () => {
           <Card className="text-center">
             <CardHeader>
               <CardTitle className="flex items-center justify-center gap-2">
-                <Calendar className="w-5 h-5 text-primary" />
+                <Calendar className="w-5 h-5 text-gray-900 dark:text-gray-100" />
                 Current Availability
               </CardTitle>
             </CardHeader>
@@ -116,7 +116,7 @@ const Contact = () => {
               <Card key={index} className="hover-lift group">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-4">
-                    <div className="p-2 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <div className="p-2 bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100 rounded-lg group-hover:bg-gray-900 group-hover:text-white dark:group-hover:bg-gray-100 dark:group-hover:text-gray-900 transition-colors">
                       {method.icon}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -160,7 +160,7 @@ const Contact = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
+                <MapPin className="w-5 h-5 text-gray-900 dark:text-gray-100" />
                 Location & Work Preferences
               </CardTitle>
             </CardHeader>
@@ -199,19 +199,19 @@ const Contact = () => {
                   <h4 className="font-semibold mb-3">Ideal Roles</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       AI/ML Engineering
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Software Engineering
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Robotics and Autonomous Systems
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Research and Development
                     </li>
                     
@@ -221,15 +221,15 @@ const Contact = () => {
                   <h4 className="font-semibold mb-3">Company Culture</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Values technical depth and continuous learning
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Supports mentorship and knowledge sharing
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       Focuses on creating solutions that solve meaningful, real-world problems.
                     </li>
                   </ul>

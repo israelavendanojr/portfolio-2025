@@ -65,20 +65,20 @@ const Experience = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "Current": return "badge-success";
-      case "Upcoming": return "badge-primary";
-      case "Recent": return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800";
-      case "Early Career": return "bg-gray-50 text-gray-700 border-gray-200 dark:bg-gray-900/20 dark:text-gray-300 dark:border-gray-800";
-      default: return "badge-primary";
+      case "Current": return "badge-dark";
+      case "Upcoming": return "badge-medium";
+      case "Recent": return "badge-light";
+      case "Early Career": return "badge-light";
+      default: return "badge-medium";
     }
   };
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case "Research": return "text-purple-600 dark:text-purple-400";
-      case "Academic": return "text-blue-600 dark:text-blue-400";
-      case "Leadership": return "text-green-600 dark:text-green-400";
-      case "Technical": return "text-orange-600 dark:text-orange-400";
+      case "Research": return "text-gray-900 dark:text-gray-100";
+      case "Academic": return "text-gray-700 dark:text-gray-300";
+      case "Leadership": return "text-gray-700 dark:text-gray-300";
+      case "Technical": return "text-gray-700 dark:text-gray-300";
       default: return "text-gray-600 dark:text-gray-400";
     }
   };
@@ -104,7 +104,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div key={index} className="relative">
                 {/* Timeline Dot */}
-                <div className="absolute left-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block"></div>
+                <div className="absolute left-6 w-4 h-4 bg-gray-900 dark:bg-gray-100 rounded-full border-4 border-background hidden md:block"></div>
 
                 <Card className="md:ml-20 hover-lift">
                   <CardHeader>
@@ -143,13 +143,13 @@ const Experience = () => {
                     
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 text-sm font-medium">
-                        <TrendingUp className="w-4 h-4 text-primary" />
+                        <TrendingUp className="w-4 h-4 text-gray-900 dark:text-gray-100" />
                         Key Achievements
                       </div>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start">
-                            <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-gray-900 dark:bg-gray-100 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                             <span className="text-sm text-muted-foreground">{achievement}</span>
                           </li>
                         ))}

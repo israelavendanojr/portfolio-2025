@@ -7,6 +7,20 @@ import { cn } from '@/lib/utils';
 const Projects = () => {
   const projects = [
     {
+      title: "KELP - Environmental Risk Terrain Visualizer",
+      subtitle: "DubHacks 2025 Project",
+      description: "AI-powered geospatial platform that transforms environmental policy questions into instant predictive 3D models. Two-stage LLM pipeline generates county-specific climate predictions grounded in real baseline data, rendering them as interactive WebGL terrain visualizations across all 39 Washington State counties.",
+      tech: ["React", "TypeScript", "FastAPI", "Deck.gl", "Mapbox GL", "Gemini AI", "Python", "WebGL", "Tailwind CSS"],
+      tags: ["AI/ML", "Geospatial-Computing", "Full-Stack", "Data-Visualization", "REST-API", "3D-Graphics"],
+      impact: "Reduces environmental impact assessment time from weeks to seconds with AI-powered predictive modeling and real-time 3D visualization",
+      icon: <Brain className="w-6 h-6" />,
+      status: "Hackathon",
+      links: {
+        demo: "https://devpost.com/software/kelp?ref_content=user-portfolio&ref_feature=in_progress",
+        github: "https://github.com/israelavendanojr/dubhacks-2025",
+      }
+    },
+    {
       title: "CrowdVision",
       subtitle: "Meta Hackathon Finalist",
       description: "Top 6 teams out of 300+ participants in 36-hour competition. Integrated real-time CV processing with LLM-powered safety analysis, handling 600+ video frames with RAG-enhanced decision making.",

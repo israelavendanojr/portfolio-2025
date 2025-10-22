@@ -50,7 +50,7 @@ const Index = () => {
               © 2025 Israel Avendano Jr. Built with React, TypeScript, and Tailwind CSS.
             </p>
             <p>
-              Seeking Summer 2026 internships and new-grad opportunities in AI/ML and Software Engineering.
+              Seeking 2026 internships and new-grad opportunities in AI/ML and Software Engineering.
             </p>
           </div>
         </div>

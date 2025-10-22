@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="text-base sm:text-lg text-gray-300 mb-8 fade-in px-2">
             <p className="mb-2 leading-relaxed">Western Washington University • Graduating June 2026</p>
             <p className="text-gray-200 font-semibold">
-              Seeking Summer 2026 Roles
+              Seeking 2026 Roles
             </p>
           </div>
 

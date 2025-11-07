@@ -55,7 +55,7 @@ const Contact = () => {
       icon: <FileText className="w-5 h-5" />,
       label: "Resume",
       value: "Download PDF",
-      href: "https://drive.google.com/file/d/1wG5eAfBZnMHdvPOhcWUe4jizqHXjiGoS/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1OPFD6yZxzWV9Z8VCWnzsp1J0FPfRVoGz/view?usp=sharing",
       description: "Detailed technical background and project summaries"
     }
   ];
